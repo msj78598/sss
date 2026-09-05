@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-توليد التعليق الصوتي العربي لكل مشهد (بدون إنترنت بعد تنزيل النموذج)
-يستخدم نموذج Piper العربي (ar_JO-kareem-medium) عبر sherpa-onnx.
+توليد التعليق الصوتي العربي لكل مشهد.
+ترتيب الأولوية لكل مشهد:
+  1) ملف صوتي خارجي في voice/sX.(wav|mp3|m4a|ogg) — تسجيل الطالبة أو صوت عصبي سحابي (انظر make_voice_edge.py)
+  2) توليد محلي بنموذج Piper العربي مع محوّل صوتي مضبوط بقواعد صريحة (arabic_tts.py)
 الناتج: build/audio/sXX.wav + build/timing.json (أزمنة بداية كل مشهد ومدته).
 """
-import json, os, sys, tarfile, urllib.request
-import sherpa_onnx, soundfile as sf
+import glob, json, os, subprocess, sys, tarfile, urllib.request
+import soundfile as sf
+from arabic_tts import PiperArabic
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BUILD = os.path.join(HERE, "build")
+VOICE = os.path.join(HERE, "voice")
 AUDIO = os.path.join(BUILD, "audio")
 MODEL_DIR = os.path.join(BUILD, "vits-piper-ar_JO-kareem-medium")
 MODEL_URL = ("https://github.com/k2-fsa/sherpa-onnx/releases/download/"
@@ -72,34 +76,43 @@ def ensure_model():
     os.remove(tgz)
 
 
-def main():
-    ensure_model()
-    os.makedirs(AUDIO, exist_ok=True)
-    cfg = sherpa_onnx.OfflineTtsConfig(
-        model=sherpa_onnx.OfflineTtsModelConfig(
-            vits=sherpa_onnx.OfflineTtsVitsModelConfig(
-                model=os.path.join(MODEL_DIR, "ar_JO-kareem-medium.onnx"),
-                tokens=os.path.join(MODEL_DIR, "tokens.txt"),
-                data_dir=os.path.join(MODEL_DIR, "espeak-ng-data"),
-                length_scale=1.12,   # أبطأ قليلاً لوضوح أفضل
-            ),
-            num_threads=4,
-        )
-    )
-    tts = sherpa_onnx.OfflineTts(cfg)
+def external_voice(sid):
+    """يبحث عن ملف صوتي خارجي للمشهد ويحوّله إلى WAV أحادي 22050 هرتز."""
+    for ext in ("wav", "mp3", "m4a", "ogg", "flac", "aac"):
+        src = os.path.join(VOICE, f"{sid}.{ext}")
+        if os.path.exists(src):
+            import imageio_ffmpeg
+            dst = os.path.join(AUDIO, f"{sid}.wav")
+            subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-loglevel", "error", "-i", src,
+                            "-ac", "1", "-ar", "22050", "-af", "silenceremove=start_periods=1:start_threshold=-45dB,"
+                            "areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse", dst], check=True)
+            return dst
+    return None
 
+
+def main():
+    os.makedirs(AUDIO, exist_ok=True)
+    tts = None
     t = 0.0
     scenes = []
     for sid, lead, tail, text in SCENES:
-        audio = tts.generate(text, sid=0, speed=1.0)
-        path = os.path.join(AUDIO, f"{sid}.wav")
-        sf.write(path, audio.samples, audio.sample_rate)
-        dur_audio = len(audio.samples) / audio.sample_rate
+        path = external_voice(sid)
+        source = "voice/"
+        if path is None:
+            if tts is None:
+                ensure_model()
+                tts = PiperArabic(MODEL_DIR, length_scale=1.1)
+            audio = tts.synth(text)
+            path = os.path.join(AUDIO, f"{sid}.wav")
+            sf.write(path, audio, tts.sr)
+            source = "piper"
+        info = sf.info(path)
+        dur_audio = info.frames / info.samplerate
         dur = lead + dur_audio + tail
         scenes.append({"id": sid, "start": round(t, 3), "dur": round(dur, 3),
                        "audio_offset": round(t + lead, 3), "audio_dur": round(dur_audio, 3),
-                       "wav": path})
-        print(f"{sid}: narration {dur_audio:5.1f}s  scene {dur:5.1f}s  starts at {t:6.1f}s")
+                       "wav": path, "source": source})
+        print(f"{sid} [{source:6}]: narration {dur_audio:5.1f}s  scene {dur:5.1f}s  starts at {t:6.1f}s")
         t += dur
     timing = {"fps": 30, "total": round(t, 3), "scenes": scenes}
     with open(os.path.join(BUILD, "timing.json"), "w", encoding="utf-8") as f:
