@@ -1,0 +1,5 @@
+playwright>=1.45
+imageio-ffmpeg>=0.5
+sherpa-onnx>=1.10
+soundfile>=0.12
+numpy>=1.23
