@@ -1,0 +1,53 @@
+name: Pages (privacy & support)
+
+on:
+  push:
+    paths:
+      - "thakir/docs/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build static pages from Markdown
+        run: |
+          pip install --quiet markdown
+          mkdir -p site/thakir/privacy site/thakir/support
+          python3 - <<'PY'
+          import markdown, pathlib
+          tpl = """<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title>
+          <style>body{{font-family:-apple-system,Segoe UI,Tahoma,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.8;color:#1b1b1b}}
+          h1{{color:#1666e8}}a{{color:#1666e8}}hr{{margin:40px 0;border:0;border-top:1px solid #ddd}}</style></head><body>{body}</body></html>"""
+          for name, title in [("privacy", "سياسة الخصوصية — ذاكِر"), ("support", "الدعم — ذاكِر")]:
+              body = markdown.markdown(pathlib.Path(f"thakir/docs/{name}.md").read_text(encoding="utf-8"))
+              pathlib.Path(f"site/thakir/{name}/index.html").write_text(tpl.format(title=title, body=body), encoding="utf-8")
+          pathlib.Path("site/index.html").write_text('<meta http-equiv="refresh" content="0;url=thakir/privacy/">', encoding="utf-8")
+          PY
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
