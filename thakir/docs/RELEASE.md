@@ -21,14 +21,20 @@ https://developer.apple.com/account ← **Membership details** ← **Team ID** (
 | `ASC_KEY_P8` | محتوى ملف p8 كاملًا (افتحه بمحرر نصوص وانسخ كل شيء بما فيه أسطر BEGIN/END) |
 | `APPLE_TEAM_ID` | Team ID |
 
-## 4) إنشاء سجل التطبيق في App Store Connect
+## 4) تفعيل صفحات الخصوصية والدعم (ضغطة واحدة)
+في المستودع: **Settings** ← **Pages** ← تحت **Build and deployment** اختر Source = **GitHub Actions**.
+بعدها يُشغَّل workflow «Pages (privacy & support)» تلقائيًا وتصبح الروابط التالية شغّالة:
+- https://msj78598.github.io/sss/thakir/privacy
+- https://msj78598.github.io/sss/thakir/support
+
+## 5) إنشاء سجل التطبيق في App Store Connect
 بعد أول تشغيل ناجح لخطوة «Register bundle id» (أو يدويًا من https://developer.apple.com/account/resources/identifiers):
 1. App Store Connect ← **Apps** ← **+** ← **New App**.
 2. Platform: iOS، Name: **ذاكِر**، Primary Language: Arabic، Bundle ID: `com.msj.thakir`، SKU: `thakir-ios`.
 
-## 5) الرفع إلى TestFlight
+## 6) الرفع إلى TestFlight
 GitHub ← **Actions** ← **iOS Release (Thakir → TestFlight)** ← **Run workflow** ← أدخل رقم الإصدار (1.0.0) ← Run.
 بعد نحو 15 دقيقة يظهر الإصدار في App Store Connect ← TestFlight.
 
-## 6) الإرسال للمراجعة
+## 7) الإرسال للمراجعة
 في App Store Connect ← التطبيق ← **1.0 Prepare for Submission**: يُستخدم المحتوى الجاهز في مجلد `metadata/` (الوصف، الكلمات المفتاحية، سياسة الخصوصية، لقطات الشاشة)، ثم اختر الإصدار المرفوع واضغط **Add for Review** ثم **Submit**.
