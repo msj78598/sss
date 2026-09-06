@@ -1,0 +1,896 @@
+{
+  "sourceLanguage": "ar",
+  "version": "1.0",
+  "strings": {
+    "المجموعات": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decks"
+          }
+        }
+      }
+    },
+    "المراجعة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review"
+          }
+        }
+      }
+    },
+    "الإحصاءات": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stats"
+          }
+        }
+      }
+    },
+    "ذاكِر": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thakir"
+          }
+        }
+      }
+    },
+    "لا توجد مجموعات بعد": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No decks yet"
+          }
+        }
+      }
+    },
+    "أنشئ مجموعة لمادة أو فصل، ثم صوّر صفحة من الكتاب لتوليد البطاقات.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create a deck for a subject or chapter, then scan a textbook page to generate cards."
+          }
+        }
+      }
+    },
+    "مجموعة جديدة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Deck"
+          }
+        }
+      }
+    },
+    "الإعدادات": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "اسم المجموعة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deck name"
+          }
+        }
+      }
+    },
+    "مثال: أحياء – الفصل الثاني": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "e.g. Biology – Chapter 2"
+          }
+        }
+      }
+    },
+    "الرمز": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Icon"
+          }
+        }
+      }
+    },
+    "تعديل المجموعة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit Deck"
+          }
+        }
+      }
+    },
+    "إلغاء": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "حفظ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        }
+      }
+    },
+    "تعديل": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit"
+          }
+        }
+      }
+    },
+    "بطاقة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cards"
+          }
+        }
+      }
+    },
+    "مستحقة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "due"
+          }
+        }
+      }
+    },
+    "متقنة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "mastered"
+          }
+        }
+      }
+    },
+    "مسح صفحة من الكتاب": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan a textbook page"
+          }
+        }
+      }
+    },
+    "إضافة بطاقة يدويًا": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add card manually"
+          }
+        }
+      }
+    },
+    "تدريب حر": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free practice"
+          }
+        }
+      }
+    },
+    "البطاقات": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cards"
+          }
+        }
+      }
+    },
+    "لا توجد بطاقات بعد. صوّر صفحة أو أضف بطاقة.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No cards yet. Scan a page or add a card."
+          }
+        }
+      }
+    },
+    "المجموعة غير موجودة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deck not found"
+          }
+        }
+      }
+    },
+    "جديدة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New"
+          }
+        }
+      }
+    },
+    "الوجه (السؤال أو المصطلح)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Front (question or term)"
+          }
+        }
+      }
+    },
+    "اكتب السؤال": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Type the question"
+          }
+        }
+      }
+    },
+    "الخلف (الإجابة أو التعريف)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back (answer or definition)"
+          }
+        }
+      }
+    },
+    "اكتب الإجابة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Type the answer"
+          }
+        }
+      }
+    },
+    "بطاقة جديدة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Card"
+          }
+        }
+      }
+    },
+    "تعديل البطاقة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit Card"
+          }
+        }
+      }
+    },
+    "جارٍ استخراج النص…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extracting text…"
+          }
+        }
+      }
+    },
+    "توليد بطاقات": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generate Cards"
+          }
+        }
+      }
+    },
+    "إغلاق": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "تعذّر الاستخراج": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extraction failed"
+          }
+        }
+      }
+    },
+    "حسنًا": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "صوّر صفحة من الكتاب أو الملزمة، وسيحوّل ذاكِر النص إلى بطاقات مراجعة على جهازك مباشرة.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan a page from your textbook or notes. Thakir turns the text into flashcards right on your device."
+          }
+        }
+      }
+    },
+    "تصوير بالكاميرا": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan with camera"
+          }
+        }
+      }
+    },
+    "اختيار صورة من الصور": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose from Photos"
+          }
+        }
+      }
+    },
+    "لصق نص": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste text"
+          }
+        }
+      }
+    },
+    "هذا الجهاز لا يدعم التعرّف على النص العربي في الصور. يمكنك لصق النص مباشرة.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This device cannot recognize Arabic text in images. You can paste text directly."
+          }
+        }
+      }
+    },
+    "لصق النص": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste Text"
+          }
+        }
+      }
+    },
+    "استخراج": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extract"
+          }
+        }
+      }
+    },
+    "راجع البطاقات المقترحة، وعدّل ما تشاء، ثم اضغط «إضافة».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review the suggested cards, edit anything, then tap Add."
+          }
+        }
+      }
+    },
+    "الوجه": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Front"
+          }
+        }
+      }
+    },
+    "الخلف": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
+          }
+        }
+      }
+    },
+    "لم نجد نصًا مناسبًا": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No usable text found"
+          }
+        }
+      }
+    },
+    "جرّب صورة أوضح، أو الصق النص يدويًا.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try a clearer photo, or paste the text manually."
+          }
+        }
+      }
+    },
+    "لا شيء للمراجعة الآن": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing to review right now"
+          }
+        }
+      }
+    },
+    "عد لاحقًا عندما تُستحق بطاقات جديدة.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Come back when new cards are due."
+          }
+        }
+      }
+    },
+    "مراجعة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review"
+          }
+        }
+      }
+    },
+    "إنهاء": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "End"
+          }
+        }
+      }
+    },
+    "اعرض الإجابة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show answer"
+          }
+        }
+      }
+    },
+    "نسيت": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Again"
+          }
+        }
+      }
+    },
+    "صعب": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hard"
+          }
+        }
+      }
+    },
+    "جيد": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good"
+          }
+        }
+      }
+    },
+    "سهل": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Easy"
+          }
+        }
+      }
+    },
+    "أحسنت!": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Well done!"
+          }
+        }
+      }
+    },
+    "بطاقة مستحقة اليوم": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cards due today"
+          }
+        }
+      }
+    },
+    "لا بطاقات مستحقة. أحسنت!": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No cards due. Great job!"
+          }
+        }
+      }
+    },
+    "ابدأ المراجعة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start review"
+          }
+        }
+      }
+    },
+    "يوم متتالي": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "day streak"
+          }
+        }
+      }
+    },
+    "مراجعة اليوم": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "reviews today"
+          }
+        }
+      }
+    },
+    "إجمالي البطاقات": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "total cards"
+          }
+        }
+      }
+    },
+    "بحسب المجموعة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "By deck"
+          }
+        }
+      }
+    },
+    "آخر ٧ أيام": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last 7 days"
+          }
+        }
+      }
+    },
+    "الملخص": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Summary"
+          }
+        }
+      }
+    },
+    "مستحقة الآن": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Due now"
+          }
+        }
+      }
+    },
+    "مراجعات اليوم": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reviews today"
+          }
+        }
+      }
+    },
+    "إجمالي المراجعات": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total reviews"
+          }
+        }
+      }
+    },
+    "السلسلة اليومية": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily streak"
+          }
+        }
+      }
+    },
+    "الإتقان بحسب المجموعة": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mastery by deck"
+          }
+        }
+      }
+    },
+    "لا توجد مجموعات بعد.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No decks yet."
+          }
+        }
+      }
+    },
+    "عن التطبيق": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About"
+          }
+        }
+      }
+    },
+    "الإصدار": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        }
+      }
+    },
+    "التعرّف على العربية في الصور": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arabic OCR"
+          }
+        }
+      }
+    },
+    "مدعوم": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supported"
+          }
+        }
+      }
+    },
+    "غير مدعوم على هذا الجهاز": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not supported on this device"
+          }
+        }
+      }
+    },
+    "ذاكِر يحوّل صفحات الكتب إلى بطاقات مراجعة، ويجدولها بخوارزمية التكرار المتباعد لتذكّرها لفترة أطول. كل بياناتك تبقى على جهازك.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thakir turns textbook pages into flashcards and schedules them with spaced repetition so you remember longer. All your data stays on your device."
+          }
+        }
+      }
+    },
+    "الخصوصية والدعم": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy & Support"
+          }
+        }
+      }
+    },
+    "سياسة الخصوصية": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy Policy"
+          }
+        }
+      }
+    },
+    "الدعم والتواصل": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Support"
+          }
+        }
+      }
+    },
+    "حذف كل البيانات": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete all data"
+          }
+        }
+      }
+    },
+    "سيتم حذف كل المجموعات والبطاقات وسجل المراجعة نهائيًا.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All decks, cards and review history will be permanently deleted."
+          }
+        }
+      }
+    },
+    "حذف الكل": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete everything"
+          }
+        }
+      }
+    },
+    "مصطلح وتعريف": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Term & definition"
+          }
+        }
+      }
+    },
+    "سؤال وجواب": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Question & answer"
+          }
+        }
+      }
+    },
+    "أكمل الفراغ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fill in the blank"
+          }
+        }
+      }
+    },
+    "يوم": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "day"
+          }
+        }
+      }
+    }
+  }
+}
