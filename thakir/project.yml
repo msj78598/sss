@@ -1,0 +1,61 @@
+name: Thakir
+options:
+  bundleIdPrefix: com.msj
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: ar
+  createIntermediateGroups: true
+  generateEmptySchemes: false
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+targets:
+  Thakir:
+    type: application
+    platform: iOS
+    sources:
+      - path: Thakir
+    info:
+      path: Thakir/Info.plist
+      properties:
+        CFBundleDisplayName: ذاكِر
+        CFBundleName: Thakir
+        CFBundleDevelopmentRegion: ar
+        CFBundleLocalizations: [ar, en]
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIRequiresFullScreen: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        NSCameraUsageDescription: يستخدم ذاكِر الكاميرا لتصوير صفحات الكتب وتحويل النص إلى بطاقات مراجعة. لا تُرفع الصور إلى أي خادم.
+        NSPhotoLibraryUsageDescription: يحتاج ذاكِر الوصول إلى الصور لاختيار صورة صفحة واستخراج النص منها على جهازك.
+        ITSAppUsesNonExemptEncryption: false
+        LSApplicationCategoryType: public.app-category.education
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.msj.thakir
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_USER_SCRIPT_SANDBOXING: true
+    scheme:
+      testTargets: [ThakirTests]
+      gatherCoverageData: false
+  ThakirTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: ThakirTests
+    dependencies:
+      - target: Thakir
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.msj.thakir.tests
